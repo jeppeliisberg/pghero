@@ -111,7 +111,7 @@ module PgHero
             index[:structure] = structure
 
             table = structure[:table]
-            where = structure[:where].uniq
+            where = structure[:where].compact.uniq
             sort = structure[:sort]
 
             total_rows = row_stats[table].to_i
